@@ -1,1 +1,1 @@
-# wordpress-example-app
+# Wordpress, entorno de desarrollo

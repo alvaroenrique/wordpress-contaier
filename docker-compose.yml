@@ -12,13 +12,13 @@ services:
       WORDPRESS_DB_NAME: wordpress
     links:
       - mysql:mysql
-    # volumes:
-    # - ./wp-content/:/var/www/html/wp-content
+    volumes:
+      - ./wp-content/:/var/www/html/wp-content
   mysql:
     image: mysql:8.0.13
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: root
-    # volumes:
-    # - ~/mysql-data:/var/lib/mysql
+    volumes:
+      - ~/mysql-data:/var/lib/mysql
